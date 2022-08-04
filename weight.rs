@@ -12,7 +12,7 @@
 // --execution=wasm
 // --wasm-execution=compiled
 // --pallet
-// pallet-kitties
+// pallet_kitties
 // --extrinsic
 // *
 // --repeat
@@ -37,14 +37,14 @@ impl<T: frame_system::Config> pallet_kitties::WeightInfo for WeightInfo<T> {
 	// Storage: Timestamp Now (r:1 w:0)
 	// Storage: KittiesModule Kitties (r:1 w:1)
 	fn create_kitty() -> Weight {
-		(47_107_000 as Weight)
+		(47_803_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(6 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
 	// Storage: KittiesModule OwnerDetail (r:2 w:2)
 	// Storage: KittiesModule KittyDetail (r:1 w:0)
 	fn transfer() -> Weight {
-		(37_404_000 as Weight)
+		(40_030_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
